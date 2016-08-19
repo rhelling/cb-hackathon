@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Centraal Beheer</title>
+    <link href="https://dev.vhvs.com/assets/css/index.css" rel="stylesheet" />
+    <style>
+     body {
+      background-color: #edece8;
+     }
+     .cb-strip-hero {
+      height: 650px;
+     }
+    </style>
+    <script type="text/javascript">
+        window.CentraalBeheerObject = 'cb';
+        window.cb=window.cb||function(){(cb.q=cb.q||[]).push(arguments)};cb.l=+new Date;
+        cb('init');
+    </script>
+    <script type="text/javascript">cb('breadcrumb', 'set', [{text:'Home', url:'#home'}, {text:'Verzekeringen', url:'#verzekeringen'}, {text:'Product'}]);</script>
+  </head>
+  <body>
+    <header class="header-main">
+      <div class="top-bar">
+        <div class="container">
+          <ul class="list-inline list-unstyled site-section">
+              <li class="active"><a href="">Privé</a></li>
+              <li><a href="">Zzp</a></li>
+              <li><a href="">Zakelijk</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-bar">
+        <div class="container">
+          <div class="logo">
+              <a href="">
+                  <img src="https://www.centraalbeheer.nl/Style%20Library/cb_style_2014/images/logo.svg" alt="Centraal Beheer Achmea" height="76">
+              </a>
+          </div>
+          <nav class="navbar navbar-cb hidden-xs hidden-sm" id="cb-mainnav">
+              <ul class="nav navbar-nav">
+                  <li class="nav-1"><a href="">Verzekeringen</a></li>
+                  <li class="nav-2"><a href="">Sparen en beleggen</a></li>
+                  <li class="nav-3"><a href="">Lijfrente en pensioen</a></li>
+                  <li class="nav-4"><a href="">Hypotheken</a></li>
+              </ul>
+          </nav>
+      </div>
+      </div>
+    </header>
+
+    <main class="main strip-group">
+      <!-- strip-navigatie -->
+      <div class="cb-strip cb-strip-subnavigatie">
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav navbar-nav nav-cb-sub">
+                <li class="active"><a href="">Product</a></li>
+                <li><a href="">Direct afsluiten</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+      <!-- /strip-navigatie -->
+
+      <!-- strip-hero-product -->
+    <article class="cb-strip cb-strip-hero-product" data-is="cb-strip-hero" background-image="https://cba.imgix.net/verzekeringen/overlijdensrisicoverzekering/PublishingImages/ORV_verzekering.jpg">
+
+      <div class="hero-banner">
+        <div class="banner" name="banner"></div>
+      </div>
+      <div class="page container">
+        <section class="content">
+          <yield to="content">
+            <h1>Product titel</h1>
+            <h2 class="highlight margin-bottom-lg">Tagline tekst</h2>
+          </yield>
+         </section>
+    </article>
+      <!-- /strip-hero-product -->
+
+      <!-- strip-app -->
+      <article class="cb-strip cb-strip-app">
+        <div class="container">
+          <h2>Custom bereken premie app in cb-strip-app</h1>
+
+          <ul>
+            <li>Multiple steps</li>
+            <li>Keep state</li>
+            <li>Bonus: routing</li>
+          </ul>
+        </div>
+      </article>
+      <!-- /strip-app -->
+
+      <!-- strip-video -->
+    <article class="cb-strip cb-strip-video" data-is="cb-strip-video" cover-image="https://www.centraalbeheer.nl/PublishingImages/eab-spin-off-auto-3360x2100-desktop-groen-2.jpg" youtube-id="gqQOGRao7U4">
+      <div class="video-cover">
+        <div class="container">
+          <yield to="header">
+            <h2 class="strong">Lorem ipsum dolor sit amet</h2>
+            <p class="subheader">Click play to start video</p>
+          </yield>
+
+          <yield to="footer">
+            <a href="">Lorem ipsum dolor sit amet</a>
+          </yield>
+        </div>
+      <div>
+    </article>
+    <!-- /strip-video -->
+
+
+    <!-- strip-content -->
+      <article class="cb-strip cb-strip-algemene-content">
+        <div class="container">
+          <h2>Implement CB API</h2>
+          <ul>
+            <li>Show breadcrumb</li>
+            <li>Hide strip?</li>
+            <li>Change strip order?</li>
+          </ul>
+        </div>
+      </article>
+      <!-- /strip-content -->
+    </main>
+
+    <footer class="footer-main noindex">
+        <div class="footer-navigation">
+          <div class="container">
+            [ footer stuff ]
+          </div>
+        </div>
+        <div class="footer-extra">
+          [ extra footer stuff ]
+        </div>
+    </footer>
+
+    <script src="base.js"></script>
+  </body>
+</html> 

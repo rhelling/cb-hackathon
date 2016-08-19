@@ -23,12 +23,12 @@
 
 		this.cover.style.backgroundImage = 'url(' + this.opts.coverImage + ')';
 
-		play(e) {
+		this.play = function(e) {
 			this.isPlaying = true;
 			e.preventDefault();
 		}
 
-		stop(e) {
+		this.stop = function(e) {
 			this.isPlaying = false;
 			e.preventDefault();
 		}
