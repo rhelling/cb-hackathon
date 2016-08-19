@@ -66,22 +66,16 @@
     	<!-- strip-hero-product -->
 		<article class="cb-strip cb-strip-hero-product" data-is="cb-strip-hero" background-image="https://cba.imgix.net/verzekeringen/overlijdensrisicoverzekering/PublishingImages/ORV_verzekering.jpg">
 
-		  <div class="hero-banner">
-		  	<div class="banner" id="banner"></div>
-		  </div>
-
-		  <div class="page container">
-
-        <cb-breadcrumb></cb-breadcrumb>
-
+      <div class="hero-banner">
+        <div class="banner" id="banner"></div>
+      </div>
+      <div class="page container">
 		    <section class="content">
-		      <h1>Product titel</h1>
-		      <h2 class="highlight margin-bottom-lg">Tagline tekst</h2>
-
-		      <p><a href="" class="btn btn-orange" id="buttonUpdateBanner">Change header image</a></p>
-
+          <yield to="content">
+		        <h1>Product titel</h1>
+		        <h2 class="highlight margin-bottom-lg">Tagline tekst</h2>
+          </yield>
 		     </section>
-		  </div>
 		</article>
     	<!-- /strip-hero-product -->
 
@@ -100,27 +94,19 @@
     	<!-- /strip-app -->
 
     	<!-- strip-video -->
-		<article class="cb-strip cb-strip-video">
+		<article class="cb-strip cb-strip-video" data-is="cb-strip-video" cover-image="https://www.centraalbeheer.nl/PublishingImages/eab-spin-off-auto-3360x2100-desktop-groen-2.jpg" youtube-id="gqQOGRao7U4">
+      <div class="video-cover">
+        <div class="container">
+          <yield to="header">
+            <h2 class="strong">Lorem ipsum dolor sit amet</h2>
+            <p class="subheader">Click play to start video</p>
+          </yield>
 
-		    <div class="video-cover" style="background-image: url(&quot;https://cba.imgix.net/PublishingImages/eab-spin-off-auto-3360x2100-desktop-groen-2.jpg?q=50&amp;dpr=2&amp;auto=format&amp;w=1437&quot;);">
-		        <div class="container">
-		            <h2 class="strong">Lorem ipsum dolor sit amet</h2>
-		            <p class="subheader">Click play to start video</p>
-
-		            <div class="video-controls">
-		                <a href="#start-video" class="play-button"><span class="cb-iconfont-play-button"></span></a>
-		            </div>
-
-		            <p class="footer">
-		            	<a href="">Lorem ipsum dolor sit amet</a>
-		            </p>
-		        </div>
-		    </div>
-
-		    <div class="video-player ng-hide">
-		        <a href="" class="stop-video"><span class="cb-iconfont-close"></span></a>
-		    </div>
-
+          <yield to="footer">
+            <a href="">Lorem ipsum dolor sit amet</a>
+          </yield>
+        </div>
+      <div>
 		</article>
 		<!-- /strip-video -->
 
@@ -151,7 +137,9 @@
     </footer>
 
     <script src="./tags/cb-strip-hero.tag" type="riot/tag"></script>
+    <script src="./tags/cb-strip-video.tag" type="riot/tag"></script>
     <script src="./tags/cb-breadcrumb.tag" type="riot/tag"></script>
+    <script src="./tags/cb-youtube-player.tag" type="riot/tag"></script>
 
     <!-- include riot.js and the compiler -->
     <script src="./node_modules/riot/riot+compiler.min.js"></script>
