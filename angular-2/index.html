@@ -1,10 +1,27 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>My first Kenteken App</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="shortcut icon" href="https://www.centraalbeheer.nl/assets/images/favicon.ico" type="image/x-icon">
+    <title>Centraal Beheer Kenteken App</title>
+    <link href="https://dev.vhvs.com/assets/css/index.css" rel="stylesheet" />
+    <style>
+     body {
+      background-color: #edece8;
+     }
+     .cb-strip-hero {
+     	height: 650px;
+     }
+    </style>
+    <script type="text/javascript">
+        window.CentraalBeheerObject = 'cb';
+        window.cb=window.cb||function(){(cb.q=cb.q||[]).push(arguments)};cb.l=+new Date;
+        cb('init');
+    </script>
+    <script type="text/javascript">cb('breadcrumb', 'set', [{text:'Home', url:'#home'}, {text:'Verzekeringen', url:'#verzekeringen'}, {text:'Product'}]);</script>
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
 
@@ -17,8 +34,155 @@
       System.import('app').catch(function(err){ console.error(err); });
     </script>
   </head>
-
   <body>
-    <cb-kenteken>Kenteken app laden...</cb-kenteken>
+    <header class="header-main">
+      <div class="top-bar">
+        <div class="container">
+          <ul class="list-inline list-unstyled site-section">
+              <li class="active"><a href="">Privé</a></li>
+              <li><a href="">Zzp</a></li>
+              <li><a href="">Zakelijk</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-bar">
+        <div class="container">
+          <div class="logo">
+              <a href="">
+                  <img src="https://www.centraalbeheer.nl/Style%20Library/cb_style_2014/images/logo.svg" alt="Centraal Beheer Achmea" height="76">
+              </a>
+          </div>
+          <nav class="navbar navbar-cb hidden-xs hidden-sm" id="cb-mainnav">
+              <ul class="nav navbar-nav">
+                  <li class="nav-1"><a href="">Verzekeringen</a></li>
+                  <li class="nav-2"><a href="">Sparen en beleggen</a></li>
+                  <li class="nav-3"><a href="">Lijfrente en pensioen</a></li>
+                  <li class="nav-4"><a href="">Hypotheken</a></li>
+              </ul>
+          </nav>
+      </div>
+      </div>
+    </header>
+
+    <main class="main strip-group">
+    	<!-- strip-navigatie -->
+    	<div class="cb-strip cb-strip-subnavigatie">
+		    <nav class="navbar">
+		        <div class="container">
+		            <ul class="nav navbar-nav nav-cb-sub">
+			        	<li class="active"><a href="">Product</a></li>
+			        	<li><a href="">Direct afsluiten</a></li>
+		            </ul>
+		        </div>
+		    </nav>
+		</div>
+    	<!-- /strip-navigatie -->
+
+    	<!-- strip-hero-product -->
+		<article class="cb-strip cb-strip-hero-product">
+
+		  <div class="hero-banner">
+		  	<div class="banner" style="background-image: url(https://www.centraalbeheer.nl/PublishingImages/eab-spin-off-auto-1657x397.jpg);"></div>
+		  </div>
+		  <div class="page container">
+
+		    <div class="container-breadcrumb">
+		      <div class="gradient"></div>
+		      <ol class="breadcrumb">
+		      	<li><a href="">Dynamic</a></li>
+		      	<li><a href="">Load</a></li>
+		      	<li><span>Breadcrumb</span></li>
+		      </ol>
+		    </div>
+
+		    <section class="content">
+		      <h1>Autoverzekering</h1>
+		      <h2 class="highlight margin-bottom-lg">Goed verzekerd op weg!</h2>
+              <ul class="list-checked list-checked-lg margin-bottom-lg">
+                <li>3 jaar lang uw aanschafprijs terug bij total loss en diefstal. Bij WA+ of All Risk.</li>
+                <li>Gratis vervangend vervoer bij reparatie door een garage uit ons netwerk.</li>
+                <li>Uitmuntende 24/7 service en schadeafhandeling.</li>
+              </ul>
+              <cb-kenteken>Kenteken app laden...</cb-kenteken>
+		     </section>
+            <section class="content">
+                <p>
+                    Uw auto is uitstekend verzekerd met de Autoverzekering van Centraal Beheer. Ook als u wilt autodelen. U kunt rekenen op een uitmuntende service en schadeafhandeling. Via ons schadenetwerk krijgt u zelfs 4 jaar FOCWA-garantie op de reparatie. Bovendien
+                    heeft u invloed op de premie van onze Autoverzekering. Bij ons heeft u geen opzegtermijn. U kunt uw verzekering elk moment opzeggen.
+                </p>
+                <h2 class="h4">U heeft invloed op de premie van uw WA+ of All Risk Autoverzekering</h2>
+                <ul margin-bottom-lg="">
+                    <li> U betaalt minder bij een hoger eigen risico.</li>
+                    <li> U betaalt minder als u ervoor kiest om uw schade te laten repareren door een garage uit ons netwerk.</li>
+                </ul>
+            </section>             
+		  </div>
+		</article>
+    	<!-- /strip-hero-product -->
+
+    	<!-- strip-app -->
+    	<article class="cb-strip cb-strip-app">
+    		<div class="container">
+    			<h2>Custom bereken premie app in cb-strip-app</h1>
+
+    			<ul>
+    				<li>Multiple steps</li>
+    				<li>Keep state</li>
+    				<li>Bonus: routing</li>
+    			</ul>
+    		</div>
+    	</article>
+    	<!-- /strip-app -->
+
+    	<!-- strip-video -->
+		<article class="cb-strip cb-strip-video">
+
+		    <div class="video-cover" style="background-image: url(&quot;https://cba.imgix.net/PublishingImages/eab-spin-off-auto-3360x2100-desktop-groen-2.jpg?q=50&amp;dpr=2&amp;auto=format&amp;w=1437&quot;);">
+		        <div class="container">
+		            <h2 class="strong">Lorem ipsum dolor sit amet</h2>
+		            <p class="subheader">Click play to start video</p>
+
+		            <div class="video-controls">
+		                <a href="#start-video" class="play-button"><span class="cb-iconfont-play-button"></span></a>
+		            </div>
+
+		            <p class="footer">
+		            	<a href="">Lorem ipsum dolor sit amet</a>
+		            </p>
+		        </div>
+		    </div>
+
+		    <div class="video-player ng-hide">
+		        <a href="" class="stop-video"><span class="cb-iconfont-close"></span></a>
+		    </div>
+
+		</article>
+		<!-- /strip-video -->
+
+
+		<!-- strip-content -->
+    	<article class="cb-strip cb-strip-algemene-content">
+    		<div class="container">
+    			<h2>Implement CB API</h2>
+    			<ul>
+            <li>Show breadcrumb</li>
+    				<li>Hide strip?</li>
+    				<li>Change strip order?</li>
+    			</ul>
+    		</div>
+    	</article>
+    	<!-- /strip-content -->
+    </main>
+
+	<footer class="footer-main noindex">
+	   	<div class="footer-navigation">
+	   		<div class="container">
+	   			[ footer stuff ]
+	   		</div>
+	    </div>
+	    <div class="footer-extra">
+	    	[ extra footer stuff ]
+	    </div>
+	</footer>
   </body>
-</html>
+</html> 
