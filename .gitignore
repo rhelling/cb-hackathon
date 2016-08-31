@@ -3,5 +3,5 @@ angular-2/node_modules
 angular-2/typings
 angular-2/npm-debug.log
 node_modules
-angular-2/*.js
-angular-2/*.js.map
+angular-2/**/*.js
+angular-2/**/*.js.map

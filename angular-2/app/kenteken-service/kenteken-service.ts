@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class KentekenFormatService {
+export class KentekenService {
     constructor() {
         //console.log('KentekenFormatService created.');
     }
