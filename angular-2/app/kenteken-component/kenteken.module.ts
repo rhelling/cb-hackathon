@@ -8,4 +8,5 @@ import { KentekenComponent }  from './kenteken.component';
   declarations: [ KentekenComponent ],
   bootstrap: [ KentekenComponent ]
 })
+
 export class KentekenModule { }
