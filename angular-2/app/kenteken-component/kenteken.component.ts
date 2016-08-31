@@ -10,6 +10,8 @@ import { KentekenService } from '../kenteken-service/kenteken-service'
 
 export class KentekenComponent {
 
+    kenteken = "";
+
     maskKenteken(event:any) {
         console.log(this);
         console.log(event);
@@ -18,6 +20,7 @@ export class KentekenComponent {
     kentekenOphalen(event:any) {
         console.log(this);
         console.log(event);
+        this.kentekenService.getKentekenUrl(this.kenteken);
     }
 
     constructor(private kentekenService:KentekenService) {

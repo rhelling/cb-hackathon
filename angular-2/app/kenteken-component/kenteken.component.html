@@ -1,2 +1,2 @@
-<input class="licenseplate" name="kenteken" type="text" placeholder="Uw kenteken" (blur)="maskKenteken($event)"/>
+<input class="licenseplate" name="kenteken" [(ngModel)]="kenteken" type="text" placeholder="Uw kenteken" (blur)="maskKenteken($event)"/>
 <button (click)="kentekenOphalen($event)">Ophalen</button>
