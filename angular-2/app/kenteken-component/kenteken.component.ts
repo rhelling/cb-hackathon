@@ -13,14 +13,10 @@ export class KentekenComponent {
     kenteken = "";
 
     maskKenteken(event:any) {
-        console.log(this);
-        console.log(event);
-        this.kentekenService.getFormattedKenteken(event.target.value)
+        this.kenteken = this.kentekenService.getFormattedKenteken(this.kenteken)
     }
     kentekenOphalen(event:any) {
-        console.log(this);
-        console.log(event);
-        this.kentekenService.getKentekenUrl(this.kenteken);
+        window.location = this.kentekenService.getKentekenUrl(this.kenteken);
     }
 
     constructor(private kentekenService:KentekenService) {
