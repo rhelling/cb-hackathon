@@ -1,3 +1,4 @@
 <h1>Kenteken</h1>
 
-<input type="text" />
+<input type="text" (blur)="maskKenteken($event)"/>
+<button (click)="kentekenOphalen($event)">Ophalen</button>

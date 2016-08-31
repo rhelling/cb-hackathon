@@ -5,4 +5,13 @@ import { Component } from '@angular/core';
     templateUrl: 'app/kenteken-component/kenteken.component.html',
     styleUrls: ['app/kenteken-component/kenteken.component.css']
 })
-export class KentekenComponent { }
+export class KentekenComponent {
+    maskKenteken(event:any) {
+        console.log(this);
+        console.log(event);
+    }
+    kentekenOphalen(event:any) {
+        console.log(this);
+        console.log(event);
+    }
+}
