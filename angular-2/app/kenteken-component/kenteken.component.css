@@ -1,7 +1,64 @@
-input {
-    border: 3px solid #000000;
-    border-radius: 5px;
-    background-color: #ffff00;
-    height: 50px;
-    width: 250px;
+.licenseplate {
+  background-color: #f4be04;
+  background-image: url('https://www.centraalbeheer.nl/assets/images/licenseplate_original.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  border: none;
+  overflow: hidden;
+  border-radius: 3px;
+  max-width: 300px;
 }
+
+  input.form-control,
+  input {
+    font-family: Kenteken,Verdana,Geneva,"sans-serif";
+    background: transparent;
+    padding-left: 40px;
+    border:none;
+    height: 36px;
+    margin-bottom: 0;
+    color: black;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+    input:-ms-input-placeholder {
+      text-align:left;
+      font-weight: normal;
+      text-transform: none;
+      font-family: Kenteken,Verdana,Geneva,"sans-serif";
+      line-height: 1.4;
+      font-size: 24px;
+      padding-top: 10px;
+    }
+    
+    input::-moz-placeholder {
+      text-align:left;
+      font-weight: normal;
+      text-transform: none;
+      font-family: Kenteken,Verdana,Geneva,"sans-serif";
+      line-height: 1.4;
+      font-size: 24px;
+      padding-top: 10px;
+    }
+    
+    input::-webkit-input-placeholder {
+      text-align:left;
+      font-weight: normal;
+      text-transform: none;
+      font-family: Kenteken,Verdana,Geneva,"sans-serif";
+      line-height: 1.4;
+      font-size: 24px;
+      padding-top: 10px;
+    }
+
+.licenseplate-md > input.form-control, input {
+    height: 42px;
+    font-size: 30px;
+  }
+
+.licenseplate-lg > input.form-control, input {
+    height: 56px;
+    font-size: 32px;
+  }
